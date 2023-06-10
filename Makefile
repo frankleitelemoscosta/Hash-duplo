@@ -1,6 +1,6 @@
 all:
 
-	g++ ./src/main.cpp -o ./build/objects/executavel
+	g++ ./src/main.cpp ./src/Hashtable.hpp ./src/Hashtable.cpp ./src/File.cpp ./src/File.hpp -o ./build/objects/executavel
 
 clean:
 
