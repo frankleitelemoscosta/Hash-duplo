@@ -16,13 +16,13 @@ void Initialize(HashTable *h, int M){
 
 void Imprime(HashTable *h){
 	
-    for(int i=0; i<h->M; i++) printf("KEY:%d - VALUE:%d\n", h->table[i].key, h->table[i].value);
+    for(int i = 0; i < h->M ; i++) printf("KEY:%d - VALUE:%d\n", h->table[i].key, h->table[i].value);
 }
 
 
 int getValue(HashTable *h, int key){
 
-	int idx = hash(key, h->M);
+	int idx = HASH(key, h->M);
 	int aux = idx;
 	
 	while (h->table[idx].key != key){
@@ -37,7 +37,7 @@ int getValue(HashTable *h, int key){
 
 void Insert(HashTable *h, int key, int value){
     
-	int idx = hash(key, h->M);
+	int idx = HASH(key, h->M);
 	int aux = idx;
 	
 	while (h->table[idx].key != -1){

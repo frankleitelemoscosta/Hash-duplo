@@ -4,7 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define hash(v, M) (v % M)
+#define HASH(v, M) (v % M)
 
 typedef struct DataTable DataTable;
 typedef struct HashTable HashTable;
